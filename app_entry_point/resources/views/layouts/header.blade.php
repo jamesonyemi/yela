@@ -150,7 +150,19 @@
 
 }
 
-@media only screen and (max-width:360px) {
+.center-modal {
+   display:flex;
+   align-items:center;
+   justify-center:center;
+   left:40%;
+   top:20%;
+   position:relative;
+   transform: translateX(1.5%);
+
+
+}
+
+@media only screen and (max-width:375px) {
     .setting-dashboard {
         display:flex;
         align-items:center;
@@ -160,11 +172,31 @@
         transform: translateX(-7%);
 
     }
+
+    .sm-center-modal {
+        display:flex;
+        align-items:center;
+        justify-center:center;
+        left: 0.8%;
+        top:10%;
+        position:relative;
+        transform: translateX(-1.5%);
+
+    }
 }
 
 </style>
 
+<style>
+    [x-cloak] {
+        display: none !important;
+     }
+  </style>
 
-<body class="main-body app sidebar-mini">
+
+{{--  <body class="main-body app sidebar-mini" >  --}}
+    <body class="main-body app sidebar-mini"  x-data="{ showModal1: false  }" :class="{'overflow-y-hidden': showModal1}"
+    >
+
 
 

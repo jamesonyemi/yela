@@ -18,26 +18,15 @@
                                           <div class="col-sm-6">
                                           <label class="main-content-label tx-11 tx-medium tx-gray-900">First Name</label>
                                           <input
-                                             id="first_name" name="first_name" type="text" value="{{ old('first_name', $rider->first_name) }}"
+                                             id="first_name" name="first_name" type="text" value="{{ $rider->first_name }}"
                                              wire:model.lazy="first_name" id="first_name" name="first_name"
-                                             class="{{ empty($rider->first_name) ? "form-control border-info" : "form-control border-success is-valid" }}
-                                             @error('first_name') is-invalid  @enderror "
-                                              placeholder="" required >
-                                              <div class="invalid-feedback ">
-                                                  @error('first_name') <span class="error">{{ $message }}</span> @enderror
-                                              </div>
+                                             class="cursor-not-allowed form-control border-info" disabled >
                                           </div>
                                   <div class="col-sm-6">
                                       <label class="main-content-label tx-11 tx-medium tx-gray-900">Middle Name</label>
-                                      <input value="{{ old('middle_name', $rider->middle_name) }}"
+                                      <input value="{{ $rider->middle_name }}"
                                       wire:model.lazy="middle_name" id="middle_name" name="middle_name" type="text"
-                                      class="{{ empty($rider->middle_name) ? "form-control border-info" : "form-control border-success is-valid" }}
-                                      @error('middle_name') is-invalid  @enderror "
-                                      placeholder="" required
-                                      required="" >
-                                  <div class="invalid-feedback ">
-                                      @error('middle_name') <span class="error">{{ $message }}</span> @enderror
-                                  </div>
+                                      class="cursor-not-allowed form-control border-info" disabled >
                                   </div>
                               </div>
                               </div>
@@ -45,27 +34,15 @@
                                   <div class="row row-sm">
                                       <div class="col-sm-6">
                                       <label class=" main-content-label tx-11 tx-medium tx-gray-900">Last Name</label>
-                                      <input value="{{ old('last_name', $rider->last_name) }}"
-                                         id="last_name" name="last_name" type="text"
-                                         wire:model.lazy="last_name" id="last_name" name="last_name"
-                                         class="cursor-not-allowed -ml-0{{ empty($rider->last_name) ? "form-control border-info" : "form-control border-success is-valid" }}
-                                         @error('last_name') is-invalid  @enderror "
-                                          placeholder="" required >
-                                          <div class="invalid-feedback ">
-                                              @error('last_name') <span class="error">{{ $message }}</span> @enderror
-                                          </div>
+                                          <input value="{{ $rider->last_name }}"
+                                      wire:model.lazy="last_name" id="last_name" name="last_name" type="text"
+                                      class="cursor-not-allowed form-control border-info" disabled >
                                       </div>
                               <div class="col-sm-6">
                                   <label class="main-content-label tx-11 tx-medium tx-gray-900">Email</label>
-                                  <input value="{{ old('email', $rider->email) }}"
-                                  wire:model.lazy="email" id="email" name="email" type="email"
-                                  class="{{ empty($rider->email) ? "form-control border-info" : "form-control border-success is-valid" }}
-                                  @error('email') is-invalid  @enderror "
-                                  placeholder="" required
-                                  required="" >
-                              <div class="invalid-feedback ">
-                                  @error('email') <span class="error">{{ $message }}</span> @enderror
-                              </div>
+                                  <input value="{{ $rider->email }}"
+                                      wire:model.lazy="email" id="email" name="email" type="text"
+                                      class="cursor-not-allowed form-control border-info" disabled >
                               </div>
                           </div>
                           </div>
@@ -74,31 +51,17 @@
                                   <div class="row row-sm">
                                       <div class="col-sm-6">
                                           <label class="main-content-label tx-11 tx-medium tx-gray-900">Mobile Number</label>
-                                          <input value="{{ old('mobile_number', $rider->mobile_number) }}"
-                                          maxLength=15
-                                          wire:model.lazy="mobile_number" id="mobile_number" name="mobile_number" type="tel"
-                                          class="{{ empty($rider->mobile_number) ? "form-control border-info" : "form-control border-success is-valid" }}
-                                          @error('mobile_number') is-invalid  @enderror "
-                                          placeholder="" required
-                                          required="" >
-                                          <div class="invalid-feedback ">
-                                              @error('mobile_number') <span class="error">{{ $message }}</span> @enderror
-                                          </div>
+                                          <input value="{{ $rider->mobile_number }}"
+                                      wire:model.lazy="mobile_number" id="mobile_number" name="mobile_number" type="text"
+                                      class="cursor-not-allowed form-control border-info" disabled >
                                       </div>
                                   <div class="col-sm-6">
                                       <label class="main-content-label tx-11 tx-medium tx-gray-900">Residential Address</label>
                                       <div class="row">
                                           <div class="col-lg-12 col-md-12 col-sm-12">
-                                              <input value="{{ old('residential_addr', $rider->address_1) }}"
-                                              maxLength=15
-                                              wire:model.lazy="residential_address" id="residential_address" name="residential_address" type="tel"
-                                              class="{{ empty($rider->address_1) ? "form-control border-info" : "form-control border-success is-valid" }}
-                                              @error('residential_address') is-invalid  @enderror "
-                                              placeholder="" required
-                                              required="" >
-                                          <div class="invalid-feedback ">
-                                              @error('residential_address') <span class="error">{{ $message }}</span> @enderror
-                                          </div>
+                                            <input value="{{ $rider->address_1 }}"
+                                            wire:model.lazy="address_1" id="address_1" name="address_1" type="text"
+                                            class="cursor-not-allowed form-control border-info" disabled >
                                           </div>
                                       </div>
                                       </div>

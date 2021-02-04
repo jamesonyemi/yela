@@ -137,11 +137,12 @@ class DispatchedRiderController extends Controller
      * @param  \App\Models\DispatchRider $dispatchRider
      * @return \Illuminate\Http\Response
      */
-    public function show(DispatchRider $dispatchRider, Request $request)
+    public function show($id)
     {
 
         $rider = DispatchRider::find(Crypt::decrypt($id));
-        return view('dispatched_riders.show_rider_info', compact("rider"))->render();
+        return view('dispatched_riders.view_rider_info', compact("rider"))->render();
+
     }
 
     /**
