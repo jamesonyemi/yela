@@ -1,0 +1,21 @@
+<!-- Data tables -->
+		<script src="{!! asset('app_assets/plugins/datatables.net/js/jquery.dataTables.min.js') !!}"></script>
+        <script src="{!! asset('app_assets/plugins/datatables.net/js/jquery.dataTables.min.js') !!}"></script>
+		<script src="{!! asset('app_assets/plugins/datatables.net-dt/js/dataTables.dataTables.min.js') !!}"></script>
+		<script src="{!! asset('app_assets/plugins/datatables.net-responsive/js/dataTables.responsive.min.js') !!}"></script>
+		<script src="{!! asset('app_assets/plugins/datatables.net-responsive-dt/js/responsive.dataTables.min.js') !!}"></script>
+		<script src="{!! asset('app_assets/plugins/datatable/js/jquery.dataTables.js') !!}"></script>
+		<script src="{!! asset('app_assets/plugins/datatable/js/dataTables.bootstrap4.js') !!}"></script>
+		<script src="{!! asset('app_assets/plugins/datatable/js/dataTables.buttons.min.js') !!}"></script>
+		<script src="{!! asset('app_assets/plugins/datatable/js/buttons.bootstrap4.min.js') !!}"></script>
+		<script src="{!! asset('app_assets/plugins/datatable/js/jszip.min.js') !!}"></script>
+		<script src="{!! asset('app_assets/plugins/datatable/js/pdfmake.min.js') !!}"></script>
+		<script src="{!! asset('app_assets/plugins/datatable/js/vfs_fonts.js') !!}"></script>
+		<script src="{!! asset('app_assets/plugins/datatable/js/buttons.html5.min.js') !!}"></script>
+		<script src="{!! asset('app_assets/plugins/datatable/js/buttons.print.min.js') !!}"></script>
+		<script src="{!! asset('app_assets/plugins/datatable/js/buttons.colVis.min.js') !!}"></script>
+		<script src="{!! asset('app_assets/plugins/datatable/dataTables.responsive.min.js') !!}"></script>
+		<script src="{!! asset('app_assets/plugins/datatable/responsive.bootstrap4.min.js') !!}"></script>
+
+		<!-- Datatable js -->
+		<script src="{!! asset('app_assets/js/table-data.js') !!}"></script>
