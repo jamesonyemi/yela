@@ -44,11 +44,11 @@
                               <div class="form-group">
                                   <div class="row row-sm">
                                       <div class="col-sm-6">
-                                      <label class="main-content-label tx-11 tx-medium tx-gray-900">Last Name</label>
+                                      <label class=" main-content-label tx-11 tx-medium tx-gray-900">Last Name</label>
                                       <input value="{{ old('last_name', $rider->last_name) }}"
                                          id="last_name" name="last_name" type="text"
                                          wire:model.lazy="last_name" id="last_name" name="last_name"
-                                         class="{{ empty($rider->last_name) ? "form-control border-info" : "form-control border-success is-valid" }}
+                                         class="cursor-not-allowed -ml-0{{ empty($rider->last_name) ? "form-control border-info" : "form-control border-success is-valid" }}
                                          @error('last_name') is-invalid  @enderror "
                                           placeholder="" required >
                                           <div class="invalid-feedback ">
@@ -107,9 +107,6 @@
 
                               </div>
                           </div>
-                      </div>
-                      <div class="mt-4 modal-footer">
-                          <button class="btn btn-indigo" type="submit">Save Changes</button>
                       </div>
                   </form>
               </div>
