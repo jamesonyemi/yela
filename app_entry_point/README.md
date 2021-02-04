@@ -9,9 +9,9 @@
 
 ## About Yola
 
-Yola is a Saas platform for seamless delivery process between the company offering the delivery services and the respective clients.
+Yela is a Saas platform for seamless delivery process between the company offering the delivery services and the respective clients.
 
-## OVERVIEW OF YOLA DELIVERY APP
+## OVERVIEW OF YELA DELIVERY APP
 
 A web app to be used by Delivery companies and their customers. App will have two different
 interfaces. Admin Dashboard and User Dashboard
