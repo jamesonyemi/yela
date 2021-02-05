@@ -143,7 +143,7 @@
    justify-center:center;
    left:7%;
    position:relative;
-   transform: translateX(1.5%);
+   transform: translateX(3%);
    /* display: block;
     margin-left: auto;
     margin-right: auto */
@@ -193,8 +193,6 @@
      }
   </style>
 
-
-{{--  <body class="main-body app sidebar-mini" >  --}}
     <body class="main-body app sidebar-mini"  x-data="{ showModal1: false  }" :class="{'overflow-y-hidden': showModal1}"
     >
 

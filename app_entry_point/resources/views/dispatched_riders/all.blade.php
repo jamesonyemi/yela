@@ -16,7 +16,7 @@
     <!--Action Button-->
     @include('partials.action_buttons', [
 
-        'title' => 'Dispatched Riders',
+        'title' => 'Dispatch Riders',
         'create_btn' => 'Add Rider',
         'routePage'  => route('admin.dispatch-rider.create')
 

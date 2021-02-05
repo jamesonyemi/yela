@@ -58,11 +58,5 @@
 		<!-- LightSlider js -->
         <script src="{!! asset('app_assets/plugins/lightslider/js/lightslider.min.js') !!}"></script>
 
-        <script class="">
-            $( document ).ready(function() {
-                $('#my-modal').modal('hide')
-              });
-        </script>
-
 
 
