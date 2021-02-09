@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\VehicleController;
 use App\Http\Livewire\DispatchedRider\Form;
 use App\Http\Controllers\CustomerController;
 use App\Http\Livewire\Customers\CustomerDetails;
@@ -28,9 +29,10 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'admin', 'as'=> 'admin.'], function () {
     Route::resources([
-        'dispatch-rider'   =>  DispatchedRiderController::class,
-        'delivery-status'  =>  DeliveryStatusController::class,
-        'customers'        =>  CustomerController::class,
+        'dispatch-rider'    =>  DispatchedRiderController::class,
+        'vehicles'          =>  VehicleController::class,
+        'delivery-status'   =>  DeliveryStatusController::class,
+        'customers'         =>  CustomerController::class,
         'charges-per-location'   =>  ChargesPerLocationController::class,
     ]);
 

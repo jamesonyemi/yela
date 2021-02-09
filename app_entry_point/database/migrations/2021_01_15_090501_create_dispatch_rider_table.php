@@ -18,7 +18,7 @@ class CreateDispatchRiderTable extends Migration
             $table->string('email', 255)->unique();
             $table->string('password', 255);
             $table->string('mobile_number', 15)->unique();
-            // $table->integer('rating', 10)->nullable();
+            $table->integer('rating', 10)->nullable();
             $table->string('first_name', 255)->unique();
             $table->string('last_name', 255)->unique();
             $table->string('middle_name', 255)->nullable();

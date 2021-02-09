@@ -35,6 +35,10 @@
 				<li class="slide">
 					<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon" data-eva="file-text-outline"></i><span class="side-menu__label">Pages</span><i class="angle fe fe-chevron-down"></i></a>
 					<ul class="slide-menu">
+                        <li><a class="slide-item" href="{{ route('admin.vehicles.index') }}">
+                            <i class="fas fa-truck tx-20 text-primary"></i>
+                            <span class="mt-2 ml-2">{!! __('Vehicles') !!}</span>
+                            </a></li>
                         <li><a class="slide-item" href="{{ route('admin.dispatch-rider.index') }}">
                             <i class="fas fa-truck tx-20 text-primary"></i>
                             <span class="mt-2 ml-2">{!! __('Dispatch Riders') !!}</span>
