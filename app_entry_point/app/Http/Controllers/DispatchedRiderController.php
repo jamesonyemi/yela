@@ -43,7 +43,7 @@ class DispatchedRiderController extends Controller
     public function index()
     {
 
-        $riders   =   DispatchRider::latest()->paginate();
+        $riders   =   DispatchRider::latest()->whereRiderStatus("active")->paginate();
         return view('dispatched_riders.index', compact('riders'))->render();
 
     }
@@ -201,11 +201,12 @@ class DispatchedRiderController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function destroy(DispatchRider $dispatchRider)
+    public function destroy($id)
     {
-        $get_rider_id = DispatchRider::find(Crypt::decrypt($id));
-        DB::table('dispatch_riders')->where('rider_id', $get_rider_id)->update( [ 'rider_status' => 'deleted'] );
-        return view('dispatched_riders.show_rider_info', compact("rider"))->render();
+
+        $get_incoming_rider_id = Crypt::decrypt($id);
+        return DB::table('dispatch_riders')->where('rider_id', $get_incoming_rider_id)->update( [ 'rider_status' => 'deleted'] );
+        return view('dispatched_riders.ionde', compact("rider"))->render();
     }
 
 

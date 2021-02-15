@@ -12,7 +12,7 @@
     </div>
     <div class="btn-list">
         @if ($create_btn)
-            <a href="{{ ($routePage) ?? $routePage }}" class="btn btn-rounded btn-primary"><i class="mr-2 fe fe-plus-circle"></i>
+            <a href="{{ ($routePage) ?? $routePage }}" class="inline-block p-3 text-center text-white transition bg-indigo-500 rounded-full shadow ripple hover:shadow-lg hover:bg-indigo-600 focus:outline-none"><i class="mr-2 fe fe-plus-circle"></i>
                 {{ ($create_btn) ? $create_btn : '' }}
             </a>
             {{-- <a href="#" class="btn btn-rounded btn-outline-primary dropdown-toggle" data-toggle="dropdown">

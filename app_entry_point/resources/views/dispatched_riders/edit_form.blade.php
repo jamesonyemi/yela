@@ -4,7 +4,6 @@
               <div class="mb-2 modal-header">
                   <h6 class="modal-title">
                       <i class="mx-2 fas fa-truck text-primary"></i>
-                      {{-- {{ ddd($rider) }} --}}
                   </h6>
 
               </div>

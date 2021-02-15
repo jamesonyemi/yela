@@ -16,7 +16,7 @@
                             {{-- <th class="border-bottom-0">Working Time</th> --}}
                             <th class="border-bottom-0">Created</th>
                             <th class="border-bottom-0">Updated</th>
-                            <th class="flex border-bottom-0">Action</th>
+                            <th class="flex justify-center border-bottom-0">Action</th>
                         </tr>
                     </thead>
                     <tbody >
@@ -24,7 +24,7 @@
                         <?php
                             $encryptData  =   Crypt::encrypt($rider->rider_id);
                          ?>
-                        <tr wire:transition="slide-down" class="h-5 p-3 w-25 " >
+                        <tr wire:transition="slide-down" class="w-auto h-5 p-3 " >
                             <td >
                                 <div class="container">
                                     <div class="row">
@@ -53,8 +53,8 @@
                                     </div>
                                 </div>
                             </td>
-                            <td>
-                                @include('partials.current_status_of_the_rider', ['key' => $rider->rider_status] )
+                            <td class="flex-row justify-center -pb-5" >
+                                @include('partials.current_status_of_the_rider', ['key' => $rider->rider_status ] )
                             </td>
                             <td>{{ ucfirst($rider->mobile_number) }}</td>
                             {{-- <td>{{ ucfirst($rider->rating) }}</td>
@@ -71,14 +71,14 @@
                             <td class="flex flex-col items-center justify-center sm:flex-row">
                                 <a href="{{ route('admin.dispatch-rider.edit', Crypt::encrypt($rider->rider_id) ) }}"
                                  class="flex-1 text-primary">
-                                    <i class="fas fa-user-edit tx-18"></i>
+                                    <i class="fas fa-edit tx-18"></i>
                                 </a>
 
                                 <a href="{{ route('admin.dispatch-rider.show', Crypt::encrypt($rider->rider_id) )  }}"
                                 class="flex-1 ml-3 mr-3 text-orange">
                                     <i class="fas fa-eye tx-18"></i>
                                 </a>
-                                <a href="#" class="flex-1 mr-3 text-danger" @click="showModal1 = true">
+                                <a href="#" class="flex-1 mr-4 text-danger" @click="showModal1 = true" id="show-modal" data-href="{{ route('admin.dispatch-rider.destroy', Crypt::encrypt($rider->rider_id) )  }}" >
                                 <i class="fas fa-trash tx-18"> </i>
                                 </a>
                             </td>
@@ -97,6 +97,5 @@
     </div>
 </div>
 
-@include('partials.deactivate_modal')
-
+@include('partials.flag_as_deleted_modal')
 

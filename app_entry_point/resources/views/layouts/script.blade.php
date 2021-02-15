@@ -60,3 +60,14 @@
 
 
 
+<script>
+
+    $(document).on("click", "#show-modal", function () {
+
+        let data = $(this).data('href');
+        let FormControl  = document.querySelector("#delete-form");
+        let res = FormControl.setAttribute('action', data);
+
+    })
+
+  </script>

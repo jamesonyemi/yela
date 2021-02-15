@@ -51,7 +51,7 @@ x-transition:leave-end="scale-0"
 </header>
 
 <footer class="flex flex-row-reverse justify-center p-2">
-    <form id="deleteForm" method="POST" action="{{ route($action_url, $params) }}" >
+    <form id="delete-form" method="POST"  >
         @csrf
         @method("DELETE")
 

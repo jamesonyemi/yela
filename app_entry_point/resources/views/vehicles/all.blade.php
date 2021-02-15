@@ -24,7 +24,7 @@
     <!--Action Button-->
 
     <!--Main Content Container-->
-    <div class="container-fluid">
+    <div class="container-fluid ">
         <!-- Row -->
         <div class="row row-sm">
             @include('vehicles.display_vehicles')

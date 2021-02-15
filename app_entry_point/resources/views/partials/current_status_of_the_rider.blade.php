@@ -36,5 +36,5 @@ $current_status_of_dispatch_rider =   [
     </i>
     <label for="" class="rounded-pill tx-14
         {{ ( array_key_exists($key, $current_status_of_dispatch_rider) ) ? $current_status_of_dispatch_rider[$key][0] : 'text-secondary-addon' }} ">
-        <h6>{{ ucfirst(str_replace('-', ' ', $key)) }}</h6>
+        <h6>{{ strtolower(str_replace('-', ' ', $key)) }}</h6>
     </label>
