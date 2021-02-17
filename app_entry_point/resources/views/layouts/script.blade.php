@@ -1,11 +1,12 @@
+@livewireScripts
 <!-- JQuery min js -->
-		<script src="{!! asset('app_assets/plugins/jquery/jquery.min.js') !!}"></script>
+<script src="{!! asset('app_assets/plugins/jquery/jquery.min.js') !!}"></script>
 
-		<!-- Datepicker js -->
-		<script src="{!! asset('app_assets/plugins/jquery-ui/ui/widgets/datepicker.js') !!}"></script>
+<!-- Datepicker js -->
+<script src="{!! asset('app_assets/plugins/jquery-ui/ui/widgets/datepicker.js') !!}"></script>
 
-		<!-- Bootstrap Bundle js -->
-		<script src="{!! asset('app_assets/plugins/bootstrap/js/bootstrap.bundle.min.js') !!}"></script>
+<!-- Bootstrap Bundle js -->
+<script src="{!! asset('app_assets/plugins/bootstrap/js/bootstrap.bundle.min.js') !!}"></script>
 
 		<!-- Ionicons js -->
 		<script src="{!! asset('app_assets/plugins/ionicons/ionicons.js') !!}"></script>
@@ -28,6 +29,10 @@
 
 		<!-- Moment js -->
 		<script src="{!! asset('app_assets/plugins/moment/moment.js') !!}"></script>
+
+		<!-- Jquery.steps js -->
+		<script src="{{ asset('app_assets/plugins/jquery-steps/jquery.steps.min.js') }}"></script>
+		<script src="{{ asset('app_assets/plugins/parsleyjs/parsley.min.js') }}"></script>
 
 		<!-- select2.min js -->
 		<script src="{!! asset('app_assets/plugins/select2/js/select2.min.js') !!}"></script>
@@ -57,6 +62,10 @@
 
 		<!-- LightSlider js -->
         <script src="{!! asset('app_assets/plugins/lightslider/js/lightslider.min.js') !!}"></script>
+
+        <!-- Form-wizard js -->
+		<script src="{{ asset('app_assets/js/form-wizard.js') }}"></script>
+		<script src="{{ asset('app_assets/custom_scripts/alpine-form-wizard.js') }}"></script>
 
 
 

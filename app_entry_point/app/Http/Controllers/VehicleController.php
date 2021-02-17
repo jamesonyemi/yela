@@ -28,6 +28,7 @@ class VehicleController extends Controller
     public function create()
     {
         //
+        return view('vehicles.create_new_vehicle')->render();
     }
 
     /**

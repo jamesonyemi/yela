@@ -29,8 +29,8 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'admin', 'as'=> 'admin.'], function () {
     Route::resources([
-        'dispatch-rider'    =>  DispatchedRiderController::class,
         'vehicles'          =>  VehicleController::class,
+        'dispatch-rider'    =>  DispatchedRiderController::class,
         'delivery-status'   =>  DeliveryStatusController::class,
         'customers'         =>  CustomerController::class,
         'charges-per-location'   =>  ChargesPerLocationController::class,

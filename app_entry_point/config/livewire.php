@@ -54,9 +54,10 @@ return [
     */
 
     // 'asset_url'  => null,
-    'asset_base_url' => '/assets',
-    'asset_base_url' => '/delivery_app/app_entry_point',
+    // 'asset_base_url' => '/assets',
+    // 'asset_base_url' => '/app_entry_point',
     // 'asset_url'  =>  env('APP_URL', '/localhost'),
+    'asset_url' => "http://localhost/yela",
 
     /*
     |--------------------------------------------------------------------------

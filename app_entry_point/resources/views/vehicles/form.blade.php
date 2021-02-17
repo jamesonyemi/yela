@@ -13,62 +13,56 @@
         </div>
     </div>
     <!-- Mobile Header -->
-    <!--Page Section Title-->
-    @include('partials.section_title', ['section_title' => 'All Vehicles', 'text_position' => 'left'])
-    <!--Page Section Title-->
+
+    <!--Main Content Header-->
+    <div class="p-4 main-content-header container-fluid">
+                <div>
+                    {{-- <h6 class="text-center main-content-title tx-18 mg-b-5 mg-t-7">Customers</h6> --}}
+                </div>
+                <div class="btn-list">
+                    <a href="{{ route('admin.customers.create') }}" class="btn btn-rounded btn-primary"><i class="mr-2 fe fe-plus-circle"></i>New Customer</a>
+                    <a href="#" class="btn btn-rounded btn-outline-primary dropdown-toggle" data-toggle="dropdown">
+                        <i class="mr-2 fe fe-download"></i>Download<span class="caret"></span>
+                    </a>
+                    <div class="dropdown-menu" role="menu">
+                        <a class="dropdown-item" href="#"><i class="mr-2 fe fe-mail"></i>Email</a>
+                        <a class="dropdown-item" href="#"><i class="mr-2 fe fe-printer"></i>Print</a>
+                        <a class="dropdown-item" href="#"><i class="mr-2 fe fe-copy"></i>Copy</a>
+                        <a class="dropdown-item" href="#"><i class="mr-2 fe fe-edit"></i>Edit</a>
+                    </div>
+                </div>
+            </div>
+    <!--Main Content Header-->
 
     <!--Main Content Container-->
-    <div class="container-fluid ">
+    <div class="container-fluid">
         <!-- Row -->
         <div class="row row-sm">
-            @include('partials.modal_action_button')
-            @include('vehicles.display_vehicles')
+            @livewire('customers.form')
+            <livewire:counter />
+            
         </div>
         <!-- EndRow -->
     </div>
 </div>
-
-<!-- Modal2 -->
-<div
-x-cloak
-class="fixed inset-0 z-20 w-full h-full overflow-y-auto duration-300 bg-black bg-opacity-50"
-x-show="showModal2"
-x-transition:enter="transition duration-300"
-x-transition:enter-start="opacity-0"
-x-transition:enter-end="opacity-100"
-x-transition:leave="transition duration-300"
-x-transition:leave-start="opacity-100"
-x-transition:leave-end="opacity-0"
->
-<div class="relative mx-2 opacity-100 lg:-my-20 sm:w-3/4 md:w-1/2 lg:w-1/3 sm:mx-auto center-modal sm-center-modal">
-  <div
-    class="relative z-20 justify-center text-gray-900 bg-white rounded-lg shadow-lg lg:flex-row lg:-ml-20"
-    @click.away="showModal2 = false"
-    x-show="showModal2"
-    x-transition:enter="transition transform duration-300"
-    x-transition:enter-start="scale-0"
-    x-transition:enter-end="scale-100"
-    x-transition:leave="transition transform duration-300"
-    x-transition:leave-start="scale-100"
-    x-transition:leave-end="scale-0"
-  >
-  <div class="row row-sm">
+<!--Row -->
+<div class="row row-sm">
     <div class="col-md-12">
         <div class="card mg-b-10">
             <div class="card-body">
                 <div class="main-content-label mg-b-5">
-                    Create A New Vehicle
+                    Basic Wizard With Validation
                 </div>
-                <p class="mg-b-20">The Information provided will help you keep track of all vehicle within your company.</p>
+                <p class="mg-b-20">It is Very Easy to Customize and it uses in your website apllication.</p>
                 <div id="wizard2">
                     <h3>Personal Information</h3>
                     <section>
-                        <p class="mg-b-20">Please provided accurate data where it is required!</p>
+                        <p class="mg-b-20">Try the keyboard navigation by clicking arrow left or right!</p>
                         <div class="row row-sm">
-                            <div class="col-md-5 col-lg-6">
+                            <div class="col-md-5 col-lg-4">
                                 <label class="form-control-label">Firstname: <span class="tx-danger">*</span></label> <input class="form-control" id="firstname" name="firstname" placeholder="Enter firstname" required="" type="text">
                             </div>
-                            <div class="col-md-5 col-lg-6 mg-t-20 mg-md-t-0">
+                            <div class="col-md-5 col-lg-4 mg-t-20 mg-md-t-0">
                                 <label class="form-control-label">Lastname: <span class="tx-danger">*</span></label> <input class="form-control" id="lastname" name="lastname" placeholder="Enter lastname" required="" type="text">
                             </div>
                         </div>
@@ -119,12 +113,6 @@ x-transition:leave-end="opacity-0"
         </div>
     </div>
 </div>
+<!--/Row-->
 
-  </div>
-</div>
-</div>
-
-{{--  @include('customers.form_modal')  --}}
-{{--  @include('customers.edit')  --}}
-{{--  @include('customers.view_modal')  --}}
-<!--Main Content-->
+	

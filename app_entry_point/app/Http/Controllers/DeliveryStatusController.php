@@ -21,7 +21,7 @@ class DeliveryStatusController extends Controller
     public function index()
     {
         //
-        return view('settings.delivery.status.create');
+        return view('settings.delivery.status.create'); 
     }
 
     /**

@@ -18,7 +18,7 @@
                             <th class="border-bottom-0">Purpose</th>
                             <th class="border-bottom-0">Created</th>
                             <th class="border-bottom-0">Modified</th>
-                            <th class="border-bottom-0">Action</th>
+                            <th class="border-bottom-0 col-12">Action</th>
                         </tr>
                     </thead>
                     <tbody >
@@ -27,23 +27,23 @@
                         <tr wire:transition="slide-down" class="w-auto h-5 p-3 " >
                             <td class="justify-center col-1">{{ ucfirst($vehicle->year_purchased) }}</td>
                             <td class="justify-center col-1">{{ ucfirst($vehicle->year_sold) }}</td>
-                            <td class="justify-center col-2">{{ ucfirst($vehicle->transmission_type) }}</td>
+                            <td class="justify-center col-1">{{ ucfirst($vehicle->transmission_type) }}</td>
                             <td class="justify-center col-1">{{ ucfirst($vehicle-> make_country ) }}</td>
-                            <td class="justify-center col-2">{{ ucfirst($vehicle->purpose) }}</td>
+                            <td class="justify-center col-1">{{ ucfirst($vehicle->purpose) }}</td>
                             <td class="justify-center col-2" >{{ date(('D jS, M Y'), strtotime($vehicle->created_at) ) }}</td>
                             <td class="justify-center col-2">{{ date( ('D jS, M Y'), strtotime($vehicle->updated_at) ) }}</td>
-                            <td class="container-fluid">
-                                <div class="row">
+                            <td class="flex-row justify-center">
+                                <div class="justify-center col-12">
                                     <a href="{{ route('admin.vehicles.edit',$encryptData ) }}"
-                                    class="flex-1 text-primary">
+                                    class="justify-center mr-2 -ml-3 text-primary">
                                         <i class="fas fa-edit tx-18"></i>
                                     </a>
 
                                     <a href="{{ route('admin.vehicles.show',$encryptData )  }}"
-                                    class="flex-1 text-orange">
+                                    class="justify-center mx-3 -mr-3 text-orange">
                                         <i class="fas fa-eye tx-18"></i>
                                     </a>
-                                    <a href="#" class="flex-1 text-danger" @click="showModal1 = true" id="show-modal" data-href="{{ route('admin.vehicles.destroy', $encryptData )  }}" >
+                                    <a href="#" class="justify-center mx-3 text-danger" @click="showModal1 = true" id="show-modal" data-href="{{ route('admin.vehicles.destroy', $encryptData )  }}" >
                                     <i class="fas fa-trash tx-18"> </i>
                                     </a>
                                 </div>
@@ -59,9 +59,5 @@
 </div>
 
 @include('partials.flag_as_deleted_modal')
-
-
-
-
 
 
